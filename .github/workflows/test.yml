@@ -26,5 +26,6 @@ jobs:
         env:
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
           APPLITOOLS_BATCH_ID: ${{ github.sha }}
-
+          KOBITON_USERNAME: ${{ secrets.KOBITON_USERNAME }}
+          KOBITON_ACCESS_KEY: ${{ secrets.KOBITON_ACCESS_KEY }}
         run: mvn -Dtest=TestApp test
