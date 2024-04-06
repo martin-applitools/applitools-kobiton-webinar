@@ -84,7 +84,7 @@ public class TestBase {
         //
         eyes = Config.setupEyes();
         //
-        eyes.open(driver, "StockQuote.Android.Prod", "Manual to Automation Test Case");
+        eyes.open(driver, "StockQuote.Android.Prod1", "Manual to Automation Test Case");
     }
 
     public void cleanup() {
