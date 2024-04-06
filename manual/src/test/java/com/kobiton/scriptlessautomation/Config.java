@@ -60,13 +60,6 @@ public class Config {
         runner = new AppiumRunner();
         //
         eyes = new Eyes(runner);;
-        //BatchInfo batchname = new BatchInfo(batchName);
-        //
-        //batchname.setSequenceName(batchSequence);
-        //
-       // batchname.setNotifyOnCompletion(true);
-        //
-        //batchname.addProperty("Demo", prospectName);
 
         sconf.setApiKey(System.getenv("APPLITOOLS_API_KEY_KW"));
         //

@@ -90,10 +90,8 @@ public class TestBase {
     public void cleanup() {
         if (driver != null) {
             driver.quit();
-            TestResultsSummary allTestResults = runner.getAllTestResults(false);
-            for (TestResultContainer result : allTestResults) handleTestResults(result);
+            runner.getAllTestResults(false);
             eyes.abortIfNotClosed();
-            runner.getAllTestResults();
         }
     }
 
