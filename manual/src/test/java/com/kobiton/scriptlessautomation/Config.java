@@ -10,7 +10,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class Config {
     public static Eyes eyes;
     public static EyesRunner runner = null;
-    public static String batchName = "Kobiton-Applitools";
+//    public static String batchName = "Kobiton-Applitools";
     public static String batchSequence = "Kobiton-Applitools";
     public static String prospectName = "Kobiton-Appium-Demo";
 
@@ -20,7 +20,7 @@ public class Config {
     public static final String KOBITON_API_KEY = System.getenv("KOBITON_ACCESS_KEY");
     public static final String APPIUM_SERVER_URL = "https://" + KOBITON_USERNAME + ":" + KOBITON_API_KEY + "@api.kobiton.com/wd/hub";
     public static final DEVICE_SOURCE_ENUMS DEVICE_SOURCE = DEVICE_SOURCE_ENUMS.KOBITON;
-    public static final int IMPLICIT_WAIT_IN_MS = 30000;
+    public static final int IMPLICIT_WAIT_IN_MS = 10000;
     public static final int DEVICE_WAITING_MAX_TRY_TIMES = 5;
     public static final int DEVICE_WAITING_INTERVAL_IN_MS = 30000;
     public static final int VISIBILITY_TIMEOUT_IN_MS = 60000;
@@ -60,17 +60,17 @@ public class Config {
         runner = new AppiumRunner();
         //
         eyes = new Eyes(runner);;
-        BatchInfo batchname = new BatchInfo(batchName);
+        //BatchInfo batchname = new BatchInfo(batchName);
         //
-        batchname.setSequenceName(batchSequence);
+        //batchname.setSequenceName(batchSequence);
         //
-        batchname.setNotifyOnCompletion(true);
+       // batchname.setNotifyOnCompletion(true);
         //
-        batchname.addProperty("Demo", prospectName);
+        //batchname.addProperty("Demo", prospectName);
 
         sconf.setApiKey(System.getenv("APPLITOOLS_API_KEY_KW"));
         //
-        sconf.setBatch(batchname);
+        //sconf.setBatch(batchname);
         //
         sconf.setMatchTimeout(0);
         //

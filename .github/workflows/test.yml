@@ -28,4 +28,8 @@ jobs:
           APPLITOOLS_BATCH_ID: ${{ github.sha }}
           KOBITON_USERNAME: ${{ secrets.KOBITON_USERNAME }}
           KOBITON_ACCESS_KEY: ${{ secrets.KOBITON_ACCESS_KEY }}
+          APPLITOOLS_IGNORE_HELPER_LIB: ${{ vars.APPLITOOLS_IGNORE_HELPER_LIB }}
+          APPLITOOLS_AVOID_ADB_USAGE: ${{ vars.APPLITOOLS_AVOID_ADB_USAGE }}
+          APPLITOOLS_AVOID_DRIVER_STATE_REST: ${{ vars.APPLITOOLS_AVOID_DRIVER_STATE_REST }}
+
         run: mvn -Dtest=TestApp test
