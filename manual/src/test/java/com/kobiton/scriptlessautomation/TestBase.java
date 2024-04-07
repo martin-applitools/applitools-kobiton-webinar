@@ -84,16 +84,14 @@ public class TestBase {
         //
         eyes = Config.setupEyes();
         //
-        eyes.open(driver, "StockQuote.Android.Prod", "Manual to Automation Test Case");
+        eyes.open(driver, "StockQuote.Android.Prod1", "Manual to Automation Test Case");
     }
 
     public void cleanup() {
         if (driver != null) {
             driver.quit();
-            TestResultsSummary allTestResults = runner.getAllTestResults(false);
-            for (TestResultContainer result : allTestResults) handleTestResults(result);
+            runner.getAllTestResults(false);
             eyes.abortIfNotClosed();
-            runner.getAllTestResults();
         }
     }
 

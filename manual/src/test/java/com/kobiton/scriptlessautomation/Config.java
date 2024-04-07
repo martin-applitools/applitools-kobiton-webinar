@@ -10,9 +10,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class Config {
     public static Eyes eyes;
     public static EyesRunner runner = null;
-//    public static String batchName = "Kobiton-Applitools";
-    public static String batchSequence = "Kobiton-Applitools";
-    public static String prospectName = "Kobiton-Appium-Demo";
 
     enum DEVICE_SOURCE_ENUMS {KOBITON}
 
@@ -60,21 +57,8 @@ public class Config {
         runner = new AppiumRunner();
         //
         eyes = new Eyes(runner);;
-        //BatchInfo batchname = new BatchInfo(batchName);
         //
-        //batchname.setSequenceName(batchSequence);
-        //
-       // batchname.setNotifyOnCompletion(true);
-        //
-        //batchname.addProperty("Demo", prospectName);
-
         sconf.setApiKey(System.getenv("APPLITOOLS_API_KEY_KW"));
-        //
-        //sconf.setBatch(batchname);
-        //
-        sconf.setMatchTimeout(0);
-        //
-        sconf.setSendDom(false);
         //
         sconf.setAccessibilityValidation(new AccessibilitySettings(AccessibilityLevel.AA, AccessibilityGuidelinesVersion.WCAG_2_1));
         //
