@@ -25,7 +25,7 @@ public class Config {
     public static final String KOBITON_API_URL = "https://api.kobiton.com";
     //Baseline version = 670646
     //Changed version = 670647
-    public static final String APP_VERSION = "670646";
+    public static final String APP_VERSION = "670647";
 
 
     public static String getBasicAuthString() {
